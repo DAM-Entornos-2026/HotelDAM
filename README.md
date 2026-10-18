@@ -3,7 +3,7 @@ Software en PSeInt para la recepción de HotelDAM. Gestiona check-in por categor
 
 **Código base**
 
-``
+```
 Algoritmo FitDAM_Master
 	
 	// =========================================================================
@@ -72,4 +72,4 @@ Algoritmo FitDAM_Master
 	Hasta Que opcionMenu = 0
 
 FinAlgoritmo
-``
+```
