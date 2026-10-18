@@ -4,23 +4,23 @@ Software en PSeInt para la recepción de HotelDAM. Gestiona check-in por categor
 **Código base**
 
 ```
-Algoritmo FitDAM_Master
+Algoritmo HotelDAM_Master
 	
 	// =========================================================================
 	// DECLARACIÓN E INICIALIZACIÓN DE VARIABLES GLOBALES
 	// =========================================================================
-	Definir sociosActivos, capacidadGimnasio, taquillasOcupadas, opcionMenu Como Entero
-	Definir recaudacionCuotas, recaudacionClases, recaudacionSuplementos Como Real
-	Definir alertaAforoGimnasio Como Logico
+	Definir habHabitualesLibres, habSuitesLibres, huespedesTotales, nochesTotales, opcionMenu Como Entero
+	Definir recaudacionHabitaciones, recaudacionExtras Como Real
+	Definir alertaOverbooking Como Logico
 	
 	// Valores iniciales según plantilla maestra
-	sociosActivos <- 0
-	capacidadGimnasio <- 50
-	taquillasOcupadas <- 0
-	recaudacionCuotas <- 0.0
-	recaudacionClases <- 0.0
-	recaudacionSuplementos <- 0.0
-	alertaAforoGimnasio <- Falso
+	habHabitualesLibres <- 20
+	habSuitesLibres <- 5
+	recaudacionHabitaciones <- 0.0
+	recaudacionExtras <- 0.0
+	huespedesTotales <- 0
+	nochesTotales <- 0
+	alertaOverbooking <- Falso
 	
 	// =========================================================================
 	// BUCLE PRINCIPAL DE NAVEGACIÓN Y MENÚ
@@ -28,13 +28,13 @@ Algoritmo FitDAM_Master
 	Repetir
 		Escribir ""
 		Escribir "=================================================="
-		Escribir "     SISTEMA DE GESTIÓN CENTRALIZADA FITDAM      "
+		Escribir "     SISTEMA DE GESTIÓN CENTRALIZADA HOTELDAM     "
 		Escribir "=================================================="
-		Escribir "1. Alta de Socios, Tipo de Cuota y Descuentos"
-		Escribir "2. Reserva de Clases Dirigidas y Aforo"
-		Escribir "3. Alquiler de Taquillas y Venta de Suplementos"
-		Escribir "4. Facturación, Matrícula, IVA y Desglose de Cambio"
-		Escribir "5. Cierre de Turno, Tasa de Ocupación e Informe"
+		Escribir "1. Check-In, Categoría de Habitación y Temporadas"
+		Escribir "2. Régimen Alimenticio y Servicios de Spa"
+		Escribir "3. Control de Ocupación por Plantas y Overbooking"
+		Escribir "4. Facturación, Tasa Turística, IVA y Cambio"
+		Escribir "5. Cierre de Turno, Métrica RevPAR e Informe"
 		Escribir "0. Salir del programa"
 		Escribir "--------------------------------------------------"
 		Escribir "Seleccione una opción (0-5):"
@@ -63,7 +63,7 @@ Algoritmo FitDAM_Master
 				Escribir "[PENDIENTE] Caso 5 no integrado. Esperando revisión en Code Review."
 				
 			0:
-				Escribir "Cerrando el sistema FitDAM... ¡Hasta pronto!"
+				Escribir "Cerrando el sistema HotelDAM... ¡Hasta pronto!"
 				
 			De Otro Modo:
 				Escribir "[ERROR] Opción no válida. Introduzca un número entre 0 y 5."
@@ -71,5 +71,5 @@ Algoritmo FitDAM_Master
 		
 	Hasta Que opcionMenu = 0
 
-FinAlgoritmo
+FinAlgoritmo	
 ```
